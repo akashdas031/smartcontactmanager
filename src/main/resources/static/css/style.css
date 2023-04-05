@@ -1,0 +1,132 @@
+body{
+	background :#e2e2e2;
+}
+.bg-primary{
+	
+	background:#007bb2;
+	
+}
+.banner{
+	width :100%;
+	height:93vh;
+	 background:linear-gradient(rgba(0,0,0,.8),rgba(0,0,0,.8)),url(../image/backgroundimage.png);
+	 background-size:cover;
+	 color:white;
+}
+
+.my-card{
+	padding :20px;
+	background :#ffffff; 
+}
+
+/* sidebar style */
+
+@media only screen and (max-width:600px){
+	.sidebar{
+	
+	width:80% !important;
+	background:white;
+	height:100vh;
+	position:fixed;
+	padding-top:20px;
+}
+.sidebar a:hover{
+	background:#000000;
+}
+.content{
+	margin-left:0% !important;
+}
+}
+
+.sidebar{
+	display:none;
+	width:28% ;
+	background:linear-gradient(rgba(0,0,0,.8),rgba(0,0,0,.8)),url(../image/sidebarbg.jpg);
+	height:100%;
+	position:fixed;
+	padding:45px;
+	color:white;
+	z-index:99999999999;
+}
+
+.sidebar a{
+	display:block;
+	width:100%;
+	padding:10px 25px;
+	text-decoration:none;
+	color:white;
+}
+.sidebar a:hover{
+	background:#000000;
+}
+.sidebar .divider{
+	height:.5px;
+	width:100%;
+	background:#e2e2e2;
+	margin-top:10px;
+}
+
+.content{
+	
+	
+	margin-left:0%;
+}
+
+.sidebar .crossbtn{
+	position:absolute;
+	top:0;
+	right:35px;
+	font-size:36px;
+	cursor:pointer;
+	
+}
+
+.myProfilePicture{
+	width:30px;
+	height:30px;
+	object-fit:cover;
+	border-radius:50%;
+}
+
+/* Search css */
+
+.search-container{
+	position:relative;
+}
+
+.search-result{
+	position: absolute;
+	background:white;
+	padding:10px;
+	border:1px solid gray;
+	width:100%;
+	display:none;
+}
+.active{
+	background:#008040!important;
+	color:white ;
+}
+.dashboard{
+	background:linear-gradient(rgba(0,0,0,.8),rgba(0,0,0,.8)),url(../image/sidebarbg.jpg);
+	color:white;
+}
+.transparent{
+	background:transparent;
+}
+
+.viewContact{
+	background:linear-gradient(rgba(0,0,0,.8),rgba(0,0,0,.8)),url(../image/ContactP.jpg);
+	color:white;
+}
+.addContact{
+	background:linear-gradient(rgba(0,0,0,.8),rgba(0,0,0,.8)),url(../image/addContact.jpg);
+	color:white;
+}
+.profile{
+	background:linear-gradient(rgba(0,0,0,.8),rgba(0,0,0,.8)),url(../image/Profile.jpg);
+	color:white;
+}
+.setting{
+	background:linear-gradient(rgba(0,0,0,.8),rgba(0,0,0,.8)),url(../image/sidebarbg.jpg);
+	color:white;
+}

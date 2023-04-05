@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="normal/base::layout(~{::section})">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+</head>
+<body>
+	
+	<section >
+        <div class="card dashboard">
+        <div class="card transparent">
+        
+           <div class="card-body">
+           
+           <div class="text-center">
+           
+           <img style="height:200px ; width:200px" class="myProfilePicture" th:src="@{/image/phoneee.jpg}" src="" alt="logo" />
+      
+           
+           
+
+           
+           </div>
+           
+           
+           </div>
+        
+        
+        </div>
+	   <div class="card text-center transparent">
+  <div class="card-header">
+    <span th:text="'Total Contacts : '+ ${count}"></span>
+  </div>
+  <div class="card-body">
+    <h5 class="card-title text-uppercase">Smart Contact Manager</h5>
+    <p class="card-text">We provide the best service to manage your contacts in the smartest way...</p>
+    <a th:href="@{/user/openContact}" href="#" class="btn btn-primary">Start Managing</a>
+  </div>
+  <div class="card-footer text-muted">
+    
+  </div>
+</div>
+</div>
+	<script>
+	$(document).ready(()=>{
+	   $('item').removeClass("active");
+	   $("#home-link").addClass("active");
+	   
+	})
+	</script>
+	  
+	</section>
+</body>
+</html>

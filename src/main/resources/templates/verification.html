@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="${http://www.thymeleaf.org}" th:replace="base ::layout(~{::section})">
+<head>
+<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+<title>verify otp</title>
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+   
+</head>
+<body>
+<section>
+     <div id="login">
+        
+        <div class="container">
+            <div id="login-row" class="row justify-content-center align-items-center">
+                <div id="login-column" class="col-md-6">
+                    <div id="login-box" class="col-md-12">
+                        <form id="login-form" class="form" th:action="@{/verifyOtp}" method="post">
+                            
+                              <div class="form-group text-center ">
+                              <div class="alert alert-success" role="alert">
+  OTP has sent successfully...
+</div>
+
+                                <label for="otp" class="text-info">Enter OTP </label><br>
+                                <input type="text" name="otp" placeholder="Enter otp to proceed.." id="otp" class="form-control">
+                                <input type="submit" name="verify" class="btn btn-info btn-md mt-3" value="Verrify">
+                            </div>  
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
+
+</body>
+</html>

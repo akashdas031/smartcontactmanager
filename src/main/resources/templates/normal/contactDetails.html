@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="normal/base::layout(~{::section})">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+</head>
+<body>
+	
+	<section>
+       
+       <div class="card mr-3 ml-3">
+       
+          <div class="card-body" th:if="${contact}">
+          
+             <div class="container text-center">
+             
+      <img style="height:200px ; width:200px" class="myProfilePicture" th:src="@{'/image/'+${contact.cImagePath}}" src="" alt="profileImage" />
+             
+             <h3 th:text="${contact.cname}+' ('+${contact.secondName}+')'"></h3>
+             
+             <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <td scope="col"><span th:text="SCM2022+${contact.cid}"></span></td>
+      
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      
+      <th>Email</th>
+      <td><span th:text="${contact.cemail}"></span></td>
+    </tr>
+    
+    <tr>
+      
+      <th>Contact No </th>
+      <td><span th:text="${contact.phone}"></span></td>
+    </tr>
+     <tr>
+      
+      
+    
+  </tbody>
+</table>
+
+<div class="description">
+
+   <th:block th:utext="${contact.description}"></th:block>
+
+</div>
+     
+     <button  th:onclick="|deleteContact(${contact.cid})|"class="btn btn-danger btn-small">Delete</button>
+       <div class="container mt-2 mr-2">
+      
+      
+      <form th:action="@{'/user/update/'+${contact.cid}}" method="post">
+       
+       <button type="submit" class="btn btn-primary btn-small">Update</button>
+       </form>
+      
+      </div>
+      
+
+             </div>
+          
+          
+          </div>
+       
+       <h1 th:unless="${contact}" class="text-center">Unauthorized Request</h1>
+       
+       </div>
+	   
+	  
+	  
+	</section>
+</body>
+</html>
