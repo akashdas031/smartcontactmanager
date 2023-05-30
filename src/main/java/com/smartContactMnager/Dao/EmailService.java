@@ -39,7 +39,7 @@ public boolean sendEmail(String subject,String message,String to) {
 			@Override
 			protected PasswordAuthentication getPasswordAuthentication() {
 				
-				return new PasswordAuthentication("akashdas7781@gmail.com","Akash@993833");
+				return new PasswordAuthentication("akashdas7781@gmail.com","************");
 			}
 			
 		});
@@ -50,7 +50,7 @@ public boolean sendEmail(String subject,String message,String to) {
 		MimeMessage m=new MimeMessage(session);
 		
 		  try {
-			  m.setFrom(new InternetAddress(from,"Akash@993833") );
+			  m.setFrom(new InternetAddress(from,"***********") );
 			  
 			  m.addRecipient(Message.RecipientType.TO,new InternetAddress(to));
 			  
